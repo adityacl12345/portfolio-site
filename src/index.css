@@ -1,2 +1,12 @@
 @import "tailwindcss";
 
+.fade-corner {
+  background: radial-gradient(
+    circle at bottom right,
+    rgba(255, 214, 0, 0.25) 10%,       /* start (yellow glow) */
+    rgba(255, 64, 129, 0.15) 50%,     /* mid (soft pink/red blend) */
+    rgba(255, 255, 255, 0) 100%       /* fully transparent */
+  );
+  border-radius: 100% 0 0 0;
+  mix-blend-mode: screen; /* 🪄 optional for glowing blend on dark bg */
+}

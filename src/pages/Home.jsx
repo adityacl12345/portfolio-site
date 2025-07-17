@@ -129,21 +129,21 @@ const Home = () => {
               interfaces, I’m usually chasing a good Fifa session, discovering
               obscure crime documentaries, or losing myself in atmospheric music
               (yes, mostly metal — the heavier, the better). 
-              <br/>
+              <br/><br/>
               I live with my amazing wife and our mischievous little pomeranian — a fluffy,
               four-legged reminder to pause and enjoy the chaos. Together, we
               love wandering off on road trips, catching sunsets, and capturing
               stories through photographs. I’m that person who stops mid-walk
               just to frame a perfect cloud, a moody alley, or a sleepy street
               dog. Sometimes it’s the smallest things that tell the best
-              stories. <br/>
+              stories. <br/><br/>
               My downtime? It's a blend of long walks with music in my
               ears, deep dives into design systems (for fun!), and spontaneous
               midnight Google rabbit holes. I enjoy tinkering with side projects
               that may never launch — just to see what’s possible. 
               If you’re into conversations about visual thinking, minimalism, or why some UI feels like
               poetry, I’m always up for a chat. 
-              <br/>
+              <br/><br/>
               These days, I’m focused on living slower, being more mindful, and creating more than I
               consume. Whether it's a side hustle idea, a weird UI experiment,
               or a playlist of obscure indie bands — I love sharing things that
@@ -162,7 +162,7 @@ const Home = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {/* Developer Projects */}
             <a
-              href="/projects"
+              href="projects"
               className="flex flex-col items-center justify-center bg-white dark:bg-zinc-800 rounded-xl shadow-md hover:shadow-xl transition-all p-6 group hover:-translate-y-1"
             >
               <span className="text-4xl mb-3 text-blue-600 group-hover:scale-110 transition">
@@ -175,7 +175,7 @@ const Home = () => {
 
             {/* photo & Art */}
             <a
-              href="/gallery"
+              href="gallery"
               className="flex flex-col items-center justify-center bg-white dark:bg-zinc-800 rounded-xl shadow-md hover:shadow-xl transition-all p-6 group hover:-translate-y-1"
             >
               <span className="text-4xl mb-3 text-pink-500 group-hover:scale-110 transition">

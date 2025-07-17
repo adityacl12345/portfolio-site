@@ -9,35 +9,46 @@ const Navbar = () => {
       <div className="max-w-6xl mx-auto flex items-center justify-between">
         <Link
           to="/"
-          className="text-lg font-bold text-zinc-800 dark:text-white"
+          className="block"
         >
-          Aditya Ghosh
+          <h1 className="text-2xl md:text-3xl font-extrabold bg-gradient-to-r from-pink-500 via-red-500 to-yellow-400 bg-clip-text text-transparent tracking-tight select-none">
+            Adi ঘোষ
+          </h1>
         </Link>
 
         <div className="flex items-center gap-6">
           <Link
             to="/"
-            className={`text-sm ${
-              location.pathname === "/" ? "font-semibold" : ""
-            } text-zinc-700 dark:text-zinc-300 hover:underline`}
+            className={`relative group text-sm transition duration-300 ${
+              location.pathname === "/"
+                ? "font-semibold bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 bg-clip-text text-transparent"
+                : "text-zinc-700 dark:text-zinc-300"
+            }`}
           >
             Home
+            <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-500 transition-all duration-300 group-hover:w-full"></span>
           </Link>
           <Link
             to="/projects"
-            className={`text-sm ${
-              location.pathname === "/projects" ? "font-semibold" : ""
-            } text-zinc-700 dark:text-zinc-300 hover:underline`}
+            className={`relative group text-sm transition duration-300 ${
+              location.pathname === "/projects"
+                ? "font-semibold bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 bg-clip-text text-transparent"
+                : "text-zinc-700 dark:text-zinc-300"
+            }`}
           >
             Projects
+            <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-500 transition-all duration-300 group-hover:w-full"></span>
           </Link>
           <Link
             to="/gallery"
-            className={`text-sm ${
-              location.pathname === "/projects" ? "font-semibold" : ""
-            } text-zinc-700 dark:text-zinc-300 hover:underline`}
+            className={`relative group text-sm transition duration-300 ${
+              location.pathname === "/gallery"
+                ? "font-semibold bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 bg-clip-text text-transparent"
+                : "text-zinc-700 dark:text-zinc-300"
+            }`}
           >
             Gallery
+            <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-500 transition-all duration-300 group-hover:w-full"></span>
           </Link>
         </div>
       </div>
