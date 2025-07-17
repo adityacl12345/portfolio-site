@@ -15,6 +15,7 @@ import { SiAdobephotoshop, SiCanva } from "react-icons/si";
 // Other Tools
 import { SiWordpress, SiJirasoftware } from "react-icons/si";
 import { FiDownload } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 const sectionClass = "px-6 md:px-20 py-16 bg-white dark:bg-zinc-800/40 backdrop-blur-md shadow-xl border border-white/20 dark:border-zinc-500 max-w-6xl mx-6 xl:mx-auto rounded-2xl hover:shadow-xl transition-all";
 
@@ -161,9 +162,9 @@ const Home = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {/* Developer Projects */}
-            <a
-              href="projects"
-              className="flex flex-col items-center justify-center bg-white dark:bg-zinc-800 rounded-xl shadow-md hover:shadow-xl transition-all p-6 group hover:-translate-y-1"
+            <Link
+                to="/projects"
+                className="flex flex-col items-center justify-center bg-white dark:bg-zinc-800 rounded-xl shadow-md hover:shadow-xl transition-all p-6 group hover:-translate-y-1"
             >
               <span className="text-4xl mb-3 text-blue-600 group-hover:scale-110 transition">
                 <HiCode />
@@ -171,12 +172,12 @@ const Home = () => {
               <h3 className="text-lg font-semibold text-zinc-700 dark:text-white">
                 Projects
               </h3>
-            </a>
+            </Link>
 
             {/* photo & Art */}
-            <a
-              href="gallery"
-              className="flex flex-col items-center justify-center bg-white dark:bg-zinc-800 rounded-xl shadow-md hover:shadow-xl transition-all p-6 group hover:-translate-y-1"
+            <Link
+                to="/gallery"
+                className="flex flex-col items-center justify-center bg-white dark:bg-zinc-800 rounded-xl shadow-md hover:shadow-xl transition-all p-6 group hover:-translate-y-1"
             >
               <span className="text-4xl mb-3 text-pink-500 group-hover:scale-110 transition">
                 <HiOutlinePhotograph />
@@ -184,7 +185,7 @@ const Home = () => {
               <h3 className="text-lg font-semibold text-zinc-700 dark:text-white">
                 Art & Photo
               </h3>
-            </a>
+            </Link>
 
             {/* Resume & Docs */}
             <button
