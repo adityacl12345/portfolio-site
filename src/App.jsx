@@ -4,11 +4,13 @@ import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import Art from "./pages/Art";
 import Footer from "./components/Footer";
+import ScrollToTop from "./shared/ScrollToTop";
 //import Home from "./pages/Home"; // if you have one
 
 function App() {
   return (
     <Router basename="/portfolio-site/">
+      <ScrollToTop />
       <Navbar />
       <main className="bg-gradient-to-br from-zinc-100 to-zinc-200 dark:from-zinc-700 dark:to-zinc-600">
         <Routes>
