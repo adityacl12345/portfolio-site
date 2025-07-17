@@ -31,6 +31,14 @@ const Navbar = () => {
           >
             Projects
           </Link>
+          <Link
+            to="/gallery"
+            className={`text-sm ${
+              location.pathname === "/projects" ? "font-semibold" : ""
+            } text-zinc-700 dark:text-zinc-300 hover:underline`}
+          >
+            Gallery
+          </Link>
         </div>
       </div>
     </nav>

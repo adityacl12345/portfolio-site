@@ -6,7 +6,7 @@ export default function ProjectCard({
   githubLink,
 }) {
     return (
-    <div className="bg-white dark:bg-zinc-800/40 rounded-xl shadow-md p-6 group hover:scale-[1.1] duration-300 cursor-pointer border-gray-600 border-1">
+    <div className="bg-white dark:bg-zinc-800/40 rounded-xl shadow-md p-6 group hover:scale-[1.1] duration-300 cursor-pointer border-gray-600 border-1 flex flex-col">
       <h3 className="text-xl font-semibold text-zinc-800 dark:text-white mb-2">{name}</h3>
       <p className="text-sm text-zinc-600 dark:text-zinc-300 mb-4">{description}</p>
 

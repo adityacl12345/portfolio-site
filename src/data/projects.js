@@ -16,7 +16,7 @@ const projects = [
     description: "React-based social feed with login/register, infinite scrolling, pagination, and search.",
     tech: ["React", "CSS", "JavaScript"],
     liveLink: "https://adityacl12345.github.io/social-login/",
-    githubLink: "",
+    githubLink: "https://github.com/adityacl12345/social-login",
     featured: true,
   },
   {
@@ -25,7 +25,7 @@ const projects = [
     description: "A React project displaying news with search, sorting, and featured highlights.",
     tech: ["React", "Tailwind CSS", "News API"],
     liveLink: "https://adityacl12345.github.io/news-deck/",
-    githubLink: "",
+    githubLink: "https://github.com/adityacl12345/news-deck",
     featured: false,
   },
   {

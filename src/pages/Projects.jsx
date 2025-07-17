@@ -3,8 +3,8 @@ import ProjectCard from '../components/ProjectCard';
 
 function Projects() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zinc-100 to-zinc-200 dark:from-zinc-700 dark:to-zinc-600 py-10 pb-0">
-      <div className="max-w-5xl mx-auto">
+    <div className="min-h-screen bg-gradient-to-br from-zinc-100 to-zinc-200 dark:from-zinc-700 dark:to-zinc-600 py-10 px-6">
+      <div className="max-w-6xl mx-auto">
         <h1 className="text-3xl md:text-4xl font-bold text-zinc-800 dark:text-white mb-6">
           My Projects
         </h1>

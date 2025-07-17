@@ -18,6 +18,9 @@ export default {
                 "100%": { transform: "translateX(0)" },
                 },
             },
+            scrollBehavior: {
+                smooth: 'smooth',
+            },
             animation: {
                 shakeOnce: "shake 0.5s ease-in-out 1",
             },
