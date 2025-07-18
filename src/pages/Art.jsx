@@ -18,8 +18,8 @@ const Art = () => {
   
   return (
     <div className="px-6 md:px-20 py-16 min-h-screen">
-      <h2 className="text-3xl font-bold text-zinc-800 dark:text-white mb-10 text-center">
-        Art & photo
+      <h2 className="text-3xl font-bold text-zinc-800 dark:text-white mb-10 text-center uppercase">
+        Art & Photography
       </h2>
 
       {/* Media Grid */}

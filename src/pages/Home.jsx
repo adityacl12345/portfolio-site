@@ -102,27 +102,6 @@ const Home = () => {
                 <FaGithub size={20} />
                 GitHub
               </a>
-              {/* Facebook */}
-              <a
-                href="https://facebook.com/yourusername" // Replace with your actual link
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full max-w-2xl flex items-center justify-center gap-2 my-4 px-4 py-2 bg-blue-700 hover:bg-blue-800 text-white rounded-lg shadow-md transition duration-200"
-              >
-                <FaFacebook size={20} />
-                Facebook
-              </a>
-
-              {/* Instagram */}
-              <a
-                href="https://instagram.com/yourusername" // Replace with your actual link
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full max-w-2xl flex items-center justify-center gap-2 my-4 px-4 py-2 bg-pink-500 hover:bg-pink-600 text-white rounded-lg shadow-md transition duration-200"
-              >
-                <FaInstagram size={20} />
-                Instagram
-              </a>
             </div>
             <p className="dark:text-white md:max-w-3xl">
               👋 Hi, I’m Aditya — a curious mix of gamer, thinker, traveler, and

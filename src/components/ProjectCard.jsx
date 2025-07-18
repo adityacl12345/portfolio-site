@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function ProjectCard({
   name,
   description,
@@ -6,8 +8,8 @@ export default function ProjectCard({
   githubLink,
 }) {
     return (
-    <div className="relative bg-white dark:bg-zinc-800/40 rounded-xl shadow-md p-6 group hover:scale-[1.1] duration-300 cursor-pointer border-gray-600 border-1 flex flex-col">
-      <h3 className="text-xl font-semibold text-zinc-800 dark:text-white mb-2">{name}</h3>
+    <div className="relative bg-white group/card dark:bg-zinc-800/40 rounded-xl shadow-md p-6 hover:scale-[1.05] duration-300 border-gray-600 border-1 flex flex-col">
+      <h3 className="text-xl font-semibold text-zinc-800 dark:text-white mb-2 group-hover/card:bg-gradient-to-r from-red-500 to-yellow-500 group-hover/card:bg-clip-text group-hover/card:text-transparent">{name}</h3>
       <p className="text-sm text-zinc-600 dark:text-zinc-300 mb-4">{description}</p>
 
       <div className="flex flex-wrap gap-2 mb-4">
@@ -23,27 +25,28 @@ export default function ProjectCard({
 
       <div className="flex gap-4 mt-auto">
         {liveLink && (
-          <a
-            href={liveLink}
+          <Link
+            to={liveLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm text-gray-200 hover:underline"
+            className="relative group/link text-sm text-gray-200 hover:cursor-pointer "
           >
             🔗 Live
-          </a>
+            <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-gradient-to-r from-red-500 via-pink-500 to-yellow-500 transition-all duration-300 group-hover/link:w-full"></span>
+          </Link>
         )}
         {githubLink && (
-          <a
-            href={githubLink}
+          <Link
+            to={githubLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm text-zinc-600 dark:text-zinc-300 hover:underline"
+            className="relative group/link text-sm text-gray-200 hover:cursor-pointer "
           >
             🐙 GitHub
-          </a>
+            <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-500 transition-all duration-300 group-hover/link:w-full"></span>
+          </Link>
         )}
       </div>
-      <div className="absolute bottom-0 right-0 w-32 h-32 opacity-0 group-hover:opacity-80 transition-opacity duration-500 pointer-events-none fade-corner backdrop-blur-2xl" />
     </div>
   );
 }
