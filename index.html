@@ -37,10 +37,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-    <script type="module" crossorigin src="/portfolio-site/assets/index-CQRgQ7E3.js"></script>
-    <link rel="stylesheet" crossorigin href="/portfolio-site/assets/index-DcWJO7Vh.css">
+    <script type="module" crossorigin src="/portfolio-site/assets/index-DzRw9Kzv.js"></script>
+    <link rel="stylesheet" crossorigin href="/portfolio-site/assets/index-DJ4xQPT6.css">
   </head>
   <body class="bg-zinc-600 text-white font-sans">
     <div id="root"></div>
+    <script>
+      document.documentElement.classList.toggle(
+        "dark",
+        localStorage.theme === "dark" ||
+          (!("theme" in localStorage) &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches)
+      );
+    </script>
   </body>
 </html>
