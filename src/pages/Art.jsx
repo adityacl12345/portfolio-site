@@ -47,7 +47,7 @@ const Art = () => {
         ))}
       </div>
 
-      <div className="my-12 h-px w-full bg-gradient-to-r from-transparent via-zinc-200 to-transparent opacity-50" />
+      <div className="my-12 h-px w-full bg-gradient-to-r from-transparent via-zinc-800 to-transparent dark:bg-gradient-to-r dark:from-transparent dark:via-zinc-200 dark:to-transparent opacity-50" />
 
       {/* Photo Section */}
       <h3 className="text-2xl text-center font-semibold text-zinc-700 dark:text-zinc-100 mb-6">Photograpy</h3>

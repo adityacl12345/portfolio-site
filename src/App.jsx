@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Art from "./pages/Art";
 import Footer from "./components/Footer";
 import ScrollToTop from "./shared/ScrollToTop";
+import BlogPage from "./pages/Blogpage";
 //import Home from "./pages/Home"; // if you have one
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" element={<Home />} exact />
           <Route path="/projects" element={<Projects />} exact />
           <Route path="/gallery" element={<Art />} exact />
+          <Route path="/blogs" element={<BlogPage />} exact />
         </Routes>
       </main>
       <Footer />

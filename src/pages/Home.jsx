@@ -1,6 +1,6 @@
 // src/pages/Home.jsx
 import { useEffect, useRef, useState } from "react";
-
+import { motion } from "framer-motion";
 import profile from "../assets/profile.jpg"; // replace with your image
 import aboutPic from "../assets/about.jpg"; // can be same or different
 import { FaGithub, FaLinkedin, FaFacebook, FaInstagram, FaDownload, FaWhatsapp, FaEnvelope, FaPhone, FaFacebookF } from "react-icons/fa";
@@ -16,6 +16,8 @@ import { SiAdobephotoshop, SiCanva } from "react-icons/si";
 import { SiWordpress, SiJirasoftware } from "react-icons/si";
 import { FiDownload } from "react-icons/fi";
 import { Link } from "react-router-dom";
+import ContactForm from "../components/ContactForm";
+import FloatingSocialBar, { SocialIcons } from "../components/FloatingSocialBar";
 
 const sectionClass = "px-6 md:px-20 py-16 bg-white dark:bg-zinc-800/40 backdrop-blur-md shadow-xl border border-white/20 dark:border-zinc-500 max-w-6xl mx-6 xl:mx-auto rounded-2xl hover:shadow-xl transition-all";
 
@@ -23,6 +25,7 @@ const sectionClass = "px-6 md:px-20 py-16 bg-white dark:bg-zinc-800/40 backdrop-
 const Home = () => {
     const [showDocs, setShowDocs] = useState(false);
     const docsRef = useRef(null);
+    const [isDocked, setIsDocked] = useState(false);
     const contactRef = useRef(null);
 
     useEffect(() => {
@@ -43,6 +46,7 @@ const Home = () => {
 
     return (
       <div className="py-10">
+        <FloatingSocialBar contactRef={contactRef} onDockChange={(dock) => setIsDocked(dock)}/>
         {/* Hero Section */}
         <section className={`${sectionClass} my-0`}>
           <div className="w-full flex flex-col md:flex-row items-center gap-10">
@@ -103,7 +107,7 @@ const Home = () => {
                 GitHub
               </a>
             </div>
-            <p className="dark:text-white md:max-w-3xl">
+            <p className="dark:text-white md:max-w-3xl text-zinc-800">
               👋 Hi, I’m Aditya — a curious mix of gamer, thinker, traveler, and
               metalhead with a camera always within reach. When I’m not building
               interfaces, I’m usually chasing a good Fifa session, discovering
@@ -268,7 +272,7 @@ const Home = () => {
               </div>
             </div>
             {/* Separator */}
-            <div className="hidden md:block w-px bg-gradient-to-b from-transparent via-zinc-100 to-transparent opacity-50 mx-4 h-full min-h-[200px]" />
+            <div className="hidden md:block w-px bg-gradient-to-b from-transparent via-zinc-800 to-transparent dark:bg-gradient-to-b dark:from-transparent dark:via-zinc-100 dark:to-transparent opacity-50 mx-4 h-full min-h-[200px]" />
             <div className="flex-1">
               <h3 className="text-lg font-semibold mb-4 text-zinc-700 dark:text-zinc-200">
                 🎨 Creative
@@ -289,7 +293,7 @@ const Home = () => {
               </div>
             </div>
             {/* Separator */}
-            <div className="hidden md:block w-px bg-gradient-to-b from-transparent via-zinc-100 to-transparent opacity-50 mx-4 h-full min-h-[200px]" />
+            <div className="hidden md:block w-px bg-gradient-to-b from-transparent via-zinc-800 to-transparent dark:bg-gradient-to-b dark:from-transparent dark:via-zinc-100 dark:to-transparent opacity-50 mx-4 h-full min-h-[200px]" />
             <div className="flex-1">
               <h3 className="text-lg font-semibold mb-4 text-zinc-700 dark:text-zinc-200">
                 🧰 Miscellaneous
@@ -322,7 +326,7 @@ const Home = () => {
           </h2>
 
           <p className="text-zinc-600 dark:text-zinc-300 mb-6 text-center">
-            Feel free to reach out to me through any of the platforms below!
+            Feel free to reach out to me through any of the platforms or the Contact form below!
           </p>
 
           {/* Contact Info */}
@@ -341,50 +345,20 @@ const Home = () => {
             </p>
           </div>
 
-          {/* Social Buttons */}
-          <div className="flex flex-wrap justify-center gap-4">
-            {/* WhatsApp */}
-            <a
-              href="https://wa.me/919330410952"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg shadow"
-            >
-              <FaWhatsapp />
-              Message on WhatsApp
-            </a>
+          <ContactForm />
 
-            {/* Email */}
-            <a
-              href="mailto:adityaghosh1991@gmail.com"
-              className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg shadow"
+          {isDocked && (
+            <motion.div
+              initial={{ y: 50, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ type: "spring", stiffness: 50 }}
+              className="flex justify-center mt-6"
             >
-              <FaEnvelope />
-              Send Email
-            </a>
-
-            {/* Facebook */}
-            <a
-              href="https://www.facebook.com/aditya.ghosh.79"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#1877F2] hover:bg-[#145cc0] text-white px-4 py-2 rounded-lg shadow"
-            >
-              <FaFacebookF />
-              Facebook
-            </a>
-
-            {/* Instagram */}
-            <a
-              href="https://www.instagram.com/adityapsycho/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white px-4 py-2 rounded-lg shadow"
-            >
-              <FaInstagram />
-              Instagram
-            </a>
-          </div>
+              <div className="flex gap-4">
+                <SocialIcons />
+              </div>
+            </motion.div>
+          )}
         </section>
       </div>
     );

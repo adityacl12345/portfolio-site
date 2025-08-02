@@ -1,13 +1,53 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Basic Meta -->
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="theme-color" content="#18181b" /> <!-- zinc-900 -->
+
+    <!-- SEO Meta -->
+    <title>Adi ঘোষ | Frontend Developer Portfolio</title>
+    <meta name="description" content="Explore the modern frontend projects of Aditya Ghosh (Adi ঘোষ) built with React, Tailwind CSS, and a bold visual flair." />
+    <meta name="keywords" content="Aditya Ghosh, Adi Ghosh, portfolio, frontend developer, React, Tailwind CSS, web developer" />
+    <meta name="author" content="Aditya Ghosh" />
+    <meta name="robots" content="index, follow" />
+
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Open Graph / Social Preview -->
+    <meta property="og:title" content="Adi ঘোষ | Frontend Portfolio" />
+    <meta property="og:description" content="React projects, polished UI, and creative design by Aditya Ghosh." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://adityacl12345.github.io/portfolio-site/" />
+    <meta property="og:image" content="https://adityacl12345.github.io/portfolio-site/preview.jpg" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Adi ঘোষ | Frontend Developer Portfolio" />
+    <meta name="twitter:description" content="React projects and stylish UI by Aditya Ghosh using Tailwind CSS." />
+    <meta name="twitter:image" content="https://adityacl12345.github.io/portfolio-site/preview.jpg" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   </head>
-  <body>
+  <body class="bg-zinc-600 text-white font-sans">
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script>
+      document.documentElement.classList.toggle(
+        "dark",
+        localStorage.theme === "dark" ||
+          (!("theme" in localStorage) &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches)
+      );
+    </script>
   </body>
 </html>
