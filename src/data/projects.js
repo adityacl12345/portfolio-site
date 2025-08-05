@@ -30,6 +30,15 @@ const projects = [
   },
   {
     id: 4,
+    name: "Quiz App",
+    description: "A React based Quiz app to study core React concepts and hooks.",
+    tech: ["React", "Vite"],
+    liveLink: "https://adityacl12345.github.io/quiz-app/",
+    githubLink: "https://github.com/adityacl12345/quiz-app",
+    featured: false,
+  },
+  {
+    id: 5,
     name: "My Portfolio",
     description: "A React project for my portfolio.",
     tech: ["React", "Tailwind CSS", "Vite"],
@@ -38,7 +47,7 @@ const projects = [
     featured: true,
   },
   {
-    id: 5,
+    id: 6,
     name: "Summoner's Inn",
     description: "UI/UX redesign of the esports website for Freaks 4U Gaming GmbH.",
     tech: ["HTML", "SCSS", "JavaScript", "PHP"],
@@ -47,7 +56,7 @@ const projects = [
     featured: false,
   },
   {
-    id: 6,
+    id: 7,
     name: "Overtake (Porsche)",
     description: "Corporate site theming and frontend for Porsche under Freaks 4U Gaming.",
     tech: ["WordPress", "HTML", "CSS"],
@@ -56,7 +65,7 @@ const projects = [
     featured: false,
   },
   {
-    id: 7,
+    id: 8,
     name: "Fiesta Online",
     description: "MMORPG website redesign project done during my time at Gamigo AG.",
     tech: ["HTML", "jQuery", "CSS"],

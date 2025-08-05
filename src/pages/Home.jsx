@@ -18,6 +18,8 @@ import { FiDownload } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import ContactForm from "../components/ContactForm";
 import FloatingSocialBar, { SocialIcons } from "../components/FloatingSocialBar";
+import CertificateCard from "../components/CertificateCard";
+import LearningProgressBar from "../components/LearningProgressBar";
 
 const sectionClass = "px-6 md:px-20 py-16 bg-white dark:bg-zinc-800/40 backdrop-blur-md shadow-xl border border-white/20 dark:border-zinc-500 max-w-6xl mx-6 xl:mx-auto rounded-2xl hover:shadow-xl transition-all";
 
@@ -240,6 +242,26 @@ const Home = () => {
             </div>
           )}
         </section>
+        <section className={`${sectionClass} my-10`}>
+          <h2 className="text-3xl font-bold text-center text-zinc-800 dark:text-white mb-8 uppercase">
+            Certifications & Progress
+          </h2>
+
+          {/* Certificates Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-10">
+            <CertificateCard title="React, NodeJS, Express & MongoDB - The MERN Fullstack Guide" issuer="Udemy" date="July 2024" link="Mern_Certificate_Udemy.pdf" />
+            <CertificateCard title="Introduction to Front-End Development" issuer="Meta" date="August 2025" link="Meta_Certificate_Coursera.pdf" />
+          </div>
+
+          {/* Progress Bars */}
+          <div className="max-w-xl mx-auto">
+            <LearningProgressBar title="Become a Certified Web Developer: HTML, CSS and JavaScript" issuer="Udemy" percent={76} />
+            <LearningProgressBar title="React - The Complete Guide 2025 (incl. Next.js, Redux)" issuer="Udemy" percent={55} />
+            <LearningProgressBar title="Vue - The Complete Guide (incl. Router & Composition API)" issuer="Udemy" percent={34} />
+            <LearningProgressBar title="Professional Certificate: Meta Front-End Developer" issuer="Meta, Coursera" percent={15} />
+          </div>
+        </section>
+
         {/* Skills & Tools */}
         <section className={`${sectionClass} my-10`}>
           <h2 className="text-3xl font-bold text-center text-zinc-800 dark:text-white mb-12 uppercase">
